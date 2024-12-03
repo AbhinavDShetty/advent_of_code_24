@@ -1,9 +1,9 @@
 from itertools import product
 
-with open('C:\\Users\\deepa\\OneDrive\\Documents\\GitHub\\advent_of_code_24\\puzzle_1\\input_1.txt', 'r') as f:
+with open('C:\\Users\\deepa\\OneDrive\\Documents\\GitHub\\advent_of_code_24\\Solution_Python\\day_1\\input_1.txt', 'r') as f:
     list_raw_1 = f.readlines()
 
-with open('C:\\Users\\deepa\\OneDrive\\Documents\\GitHub\\advent_of_code_24\\puzzle_1\\input_2.txt', 'r') as f:
+with open('C:\\Users\\deepa\\OneDrive\\Documents\\GitHub\\advent_of_code_24\\Solution_Python\\day_1\\input_2.txt', 'r') as f:
     list_raw_2 = f.readlines()
 
 

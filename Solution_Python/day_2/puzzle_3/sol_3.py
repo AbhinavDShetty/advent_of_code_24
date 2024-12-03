@@ -1,4 +1,4 @@
-with open("C:\\Users\\deepa\\OneDrive\\Documents\\GitHub\\advent_of_code_24\\puzzle_3\\input.txt", "r") as f: 
+with open("C:\\Users\\deepa\\OneDrive\\Documents\\GitHub\\advent_of_code_24\\Solution_Python\\day_2\\input.txt", "r") as f: 
     data_raw = f.read() 
 
 reports = [list(map(int,line.split())) for line in data_raw.strip().split("\n")]
