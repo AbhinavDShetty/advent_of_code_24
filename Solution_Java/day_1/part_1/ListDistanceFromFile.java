@@ -25,8 +25,8 @@ public class ListDistanceFromFile {
             Scanner scanner = new Scanner(file);
             
             // Initialize arrays to hold the input
-            int[] leftList = new int[6];
-            int[] rightList = new int[6];
+            int[] leftList = new int[1001];
+            int[] rightList = new int[1001];
             int index = 0;
             
             // Read data into arrays
