@@ -1,6 +1,8 @@
 from collections import deque
+from pathlib import Path
 
-with open('C:\\Users\\deepa\\OneDrive\\Documents\\GitHub\\advent_of_code_24\\day_12\\input.txt', 'r') as f:
+file_path = Path(__file__).parent / "input.txt"
+with open(file_path, 'r') as f:
     farm_map = [list(line.strip()) for line in f]
 
 rows = len(farm_map)
