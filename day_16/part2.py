@@ -1,7 +1,7 @@
 from pathlib import Path
 from collections import deque
 
-file_path = Path(__file__).parent / "input1.txt"
+file_path = Path(__file__).parent / "input.txt"
 
 def read_file():
     with open(file_path, 'r') as f:
@@ -61,6 +61,7 @@ def backward_bfs(maze):
     queue.append(start_1)
     queue.append(start_2)
     visited = set()
+    i = 1
     
     while queue:
         current = queue.popleft()
@@ -71,21 +72,19 @@ def backward_bfs(maze):
         for new_dir, new_score in allowed_directions_score:
             new_x, new_y = cur_x + new_dir[0], cur_y + new_dir[1]
             
-            if maze[new_x][new_y] == '#':
-                continue
-            
-            if isinstance(maze[new_x][new_y], int) and maze[new_x][new_y]> new_score:
-                maze[new_x][new_y] = new_score
+            if isinstance(maze[new_x][new_y], int) and (maze[new_x][new_y] in [new_score, new_score - 1000] and (new_x,new_y) not in visited):
+                i += 1
+                maze[new_x][new_y] = 'O'
                 queue.append((new_x, new_y, new_dir, new_score))
                 visited.add((new_x, new_y))
-    return len(visited)
+    return i
 
 
 def resolve():
     maze = read_file()
     bfs(maze)
     result = backward_bfs(maze)
-    print_maze(maze)
+    # print_maze(maze)
     return result
 
 print(resolve())
