@@ -1,7 +1,7 @@
 from pathlib import Path
 from collections import deque
 
-file_path = Path(__file__).parent / "input2.txt"
+file_path = Path(__file__).parent / "input1.txt"
 
 def read_file():
     with open(file_path, 'r') as f:
@@ -50,8 +50,6 @@ def bfs(maze):
             if maze[new_x][new_y] in ['.','E'] or (isinstance(maze[new_x][new_y], int) and maze[new_x][new_y]> new_score):
                 maze[new_x][new_y] = new_score
                 queue.append((new_x, new_y, new_dir, new_score))
-            # print_maze(maze)
-        # print_maze(maze)
         
     return maze[1][len(maze[1])-2]
 
